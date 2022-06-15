@@ -1,3 +1,5 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -9,7 +11,7 @@ void main() {
   late NetworkInfoImplementation networkInfoImplementation;
   late MockDataConnectionChecker mockDataConnectionChecker;
 
-  setUpAll(() {
+  setUp(() {
     mockDataConnectionChecker = MockDataConnectionChecker();
     networkInfoImplementation =
         NetworkInfoImplementation(mockDataConnectionChecker);
